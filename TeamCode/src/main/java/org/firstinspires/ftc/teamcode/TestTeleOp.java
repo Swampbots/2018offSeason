@@ -2,6 +2,7 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 /**
  * Created by SwampbotsAdmin on 7/1/2018.
@@ -16,6 +17,8 @@ public class TestTeleOp extends OpMode {
     public void init() {
         leftDrive = hardwareMap.dcMotor.get("left_motor");
         rightDrive = hardwareMap.dcMotor.get("right_motor");
+
+        leftDrive.setDirection(DcMotorSimple.Direction.REVERSE);
     }
 
     public void loop() {
