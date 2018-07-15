@@ -13,6 +13,8 @@ public class TestTeleOp extends OpMode {
 
     public DcMotor leftDrive = null;
     public DcMotor rightDrive = null;
+    
+    public double driverSpeedMod = 0.5;
 
     public void init() {
         leftDrive = hardwareMap.dcMotor.get("left_motor");
@@ -22,8 +24,8 @@ public class TestTeleOp extends OpMode {
     }
 
     public void loop() {
-        leftDrive.setPower(gamepad1.left_stick_y);
-        rightDrive.setPower(gamepad1.right_stick_y);
+        leftDrive.setPower(gamepad1.left_stick_y * driverSpeedMod);
+        rightDrive.setPower(gamepad1.right_stick_y * driverSpeedMod);
     }
 
 
