@@ -13,8 +13,8 @@ public class TestTeleOp extends OpMode {
 
     public DcMotor leftDrive = null;
     public DcMotor rightDrive = null;
-    
-    public double driverSpeedMod = 0.5;
+
+    public double driverSpeedMod = 0.2;
 
     public void init() {
         leftDrive = hardwareMap.dcMotor.get("left_motor");
