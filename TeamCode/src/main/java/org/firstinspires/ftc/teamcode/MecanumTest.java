@@ -22,6 +22,7 @@ public class MecanumTest extends OpMode {
 
     public void loop() {
 
+        // Speed buttons
         double driverSpeedMod;
 
         if(gamepad1.left_bumper)        driverSpeedMod = hardware.FAST;
