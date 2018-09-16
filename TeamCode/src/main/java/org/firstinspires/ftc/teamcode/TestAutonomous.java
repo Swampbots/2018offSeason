@@ -30,20 +30,6 @@ public class TestAutonomous extends LinearOpMode {
 
         waitForStart();
 
-        telemetry.addLine("Driving forward...");
-        telemetry.update();
-
-        leftDrive.setPower(0.5);
-        rightDrive.setPower(0.5);
-
-        sleep(2000);
-
-        leftDrive.setPower(0);
-        rightDrive.setPower(0);
-
-        telemetry.addLine("Finished.");
-        telemetry.update();
-
         while(opModeIsActive()) {}
     }
 }
