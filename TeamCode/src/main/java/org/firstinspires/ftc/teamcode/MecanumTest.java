@@ -16,6 +16,8 @@ public class MecanumTest extends OpMode {
     MecanumHardware hardware = new MecanumHardware();
 
     public void init() {
+        hardware.init(hardwareMap);
+
     }
 
     public void loop() {
@@ -44,15 +46,15 @@ public class MecanumTest extends OpMode {
         hardware.rearLeftDrive.setPower(rearLeft * driverSpeedMod);
         hardware.rearRightDrive.setPower(rearRight * driverSpeedMod);
 
-        telemetry.addData("Left stick x", gamepad1.left_stick_x);
-        telemetry.addData("Left stick y", gamepad1.left_stick_y);
-        telemetry.addData("Sum", gamepad1.left_stick_x + gamepad1.left_stick_y);
-        telemetry.addLine();
-        telemetry.addData("frontLeft", frontLeft);
-        telemetry.addData("frontRight", frontRight);
-        telemetry.addData("rearLeft", rearLeft);
-        telemetry.addData("rearRight", rearRight);
-        telemetry.addLine();
+//        telemetry.addData("Left stick x", gamepad1.left_stick_x);
+//        telemetry.addData("Left stick y", gamepad1.left_stick_y);
+//        telemetry.addData("Sum", gamepad1.left_stick_x + gamepad1.left_stick_y);
+//        telemetry.addLine();
+//        telemetry.addData("frontLeft", frontLeft);
+//        telemetry.addData("frontRight", frontRight);
+//        telemetry.addData("rearLeft", rearLeft);
+//        telemetry.addData("rearRight", rearRight);
+//        telemetry.addLine();
 
     }
 }
